@@ -4,7 +4,7 @@ typedef pair<int, int> ii;
 typedef vector<ii> vii;
 void dfs(int u,vector<int> &t,vector<vii> y)
 {
-    cout<<u<<" ";
+    cout<<u<<" ";//depth first traversal 
     t[u]=1;
     for (vii::iterator it = y[u].begin(); it != y[u].end(); it++)
     {
