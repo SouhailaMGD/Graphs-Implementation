@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef pair<int, int> ii; // we will frequently use these two data type shortcuts
+typedef pair<int, int> ii; 
 typedef vector<ii> vii;
 void dfs(int u,vector<int> &t,vector<vii> y)
 {
