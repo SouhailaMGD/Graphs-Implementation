@@ -1,17 +1,11 @@
 #include <bits/stdc++.h>
 #define ii pair<int,int>
-#define mx 1000001
+#define mx 1000001  // 10^6 +1
 using namespace std;
 
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    int k;
-    scanf("%d",&k);
-    while(k--)
-    {
         int n,m;
         scanf("%d %d",&n,&m);
         priority_queue<ii> pq;
@@ -55,7 +49,6 @@ int main()
             }
         }
         cout<<endl;
-    }
     return 0;
 }
 
