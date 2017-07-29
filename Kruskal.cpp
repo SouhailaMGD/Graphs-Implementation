@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define  inf 1000001
+#define  inf 1000001 // 10^6 +1
 using namespace std;
 vector< pair<int,pair<int,int> > > m;
 vector<int> visited;
