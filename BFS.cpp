@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-void bfs(int n,vector<vector<int> > t,vector<int> &p,map<int,int> &m)
+void bfs(int n,vector<vector<int> > t,vector<int> &p)
 {
     queue<int> q;
     q.push(n);
@@ -9,14 +9,13 @@ void bfs(int n,vector<vector<int> > t,vector<int> &p,map<int,int> &m)
     while(!q.empty())
     {
         int y=q.front();
-        cout<<y<<endl;
+        cout<<y<<endl;//breadth first traversal
         q.pop();
         for(vector<int>::iterator it=t[y].begin() ; it!=t[y].end(); it++)
         {
             if(p[*it]!=1)
             {
-                m[*it]=m[y]+1;
-                p[*it]=1;
+                p[*it]=1;//marking the node as visited
                 q.push(*it);
             }
         }
@@ -24,11 +23,9 @@ void bfs(int n,vector<vector<int> > t,vector<int> &p,map<int,int> &m)
 }
 int main()
 {
-
-     int n,m,starting;
+        int n,m,starting;
         cin>>n>>m;
         vector< vector<int> > t(n+1);
-        map<int,int> r;
         vector<int> p(n+1);//visited /unvisited
         for(int j=0; j<m; j++)
         {
@@ -38,13 +35,7 @@ int main()
             t[v].push_back(u);
         }
         cin>>starting;// starting point
-        bfs(starting,t,p,r);
-        for(int i=0; i<n; i++)
-        {
-                cout<<r[i+1]<<" ";
-        }
-        cout<<endl;
-        r.clear();
+        bfs(starting,t,p);
         p.clear();
-    return 0;
+        return 0;
 }
