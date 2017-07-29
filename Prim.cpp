@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define  inf 1000001
+#define  inf 1000001 // 10^6 +1
 using namespace std;
 vector<vector<pair<int,int> > > m;
 vector<int> visited;
@@ -34,16 +34,11 @@ void prim(int h,int n)
 }
 int main()
 {
-
-      cm=0;
       int n,q;
       scanf("%d%d",&n,&q);
-      m.clear();
       m.resize(n+1);
-      key.clear();
       key.resize(n+1);
       fill(key.begin(),key.end(),inf);
-      visited.clear();
       visited.resize(n+1);
       fill(visited.begin(),visited.end(),0);
       while(q--)
@@ -53,8 +48,8 @@ int main()
           m[x].push_back(make_pair(y,c));
           m[y].push_back(make_pair(x,c));
       }
-  int h;
-  cin>>h;
+      int h;
+      cin>>h;// starting point
       prim(h,n);
       printf("%d\n",cm);
   return 0;
